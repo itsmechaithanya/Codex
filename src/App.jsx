@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import Home from './Componends/Home'
+import Home from './Components/Home'
 import Lenis from 'lenis'
+
 
 function App() {
   useEffect(() => {
@@ -8,9 +9,9 @@ function App() {
     const lenis = new Lenis();
 
     // Listen for the scroll event and log the event data
-    lenis.on('scroll', (e) => {
-      console.log(e);
-    });
+    // lenis.on('scroll', (e) => {
+    //   console.log(e);
+    // });
 
     // Use requestAnimationFrame to continuously update the scroll
     function raf(time) {

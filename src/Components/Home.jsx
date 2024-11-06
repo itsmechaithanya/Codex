@@ -27,7 +27,7 @@ function Home() {
         <h1 className='text-[4vw] font-bold pt-[10vh] pl-[6vw]'>Meet Your Mentor!</h1>
         <div className='flex mt-[4vh]'>
             <div className='h-[79vh] w-1/2  pl-[5vw] flex items-center'>
-                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw]'>
+                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw] pb-[3vh]'>
                     <div className=''>
                         <h1 className='text-[4vw] w-1/2 leading-[4vw] font-light'>Amogh Deshmukh.</h1>
                         <h1 className='font-light mt-[1vh] text-[1.3vw]'>Assistant Dean</h1>
