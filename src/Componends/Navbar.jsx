@@ -8,19 +8,23 @@ import ins from '../assets/ins.png'
 function Navbar() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuVisible(!isMenuVisible);
+  const openMenu = () => {
+    setIsMenuVisible(true);
+  };
+
+  const closeMenu = () => {
+    setIsMenuVisible(false);
   };
 
   return (
     <div className='pl-[5vw] pt-[3vh] fixed z-30'>
       <div className='w-[90vw] h-[8vh] rounded-full flex justify-between items-center px-[1vw] backdrop-blur-md bg-[#0000003b]  text-white border'>
         <img className='ml-[1.3vw] h-[6vh]' src={logo} alt="" />
-        <button className='bg-white text-black px-[2vw] py-[1vh] rounded-full text-[1.1vw]' onClick={toggleMenu}>Menu</button>
+        <button className='bg-white text-black px-[2vw] py-[1vh] rounded-full text-[1.1vw] open' onClick={openMenu}>Menu</button>
       </div>
       <div className='flex justify-end -mr-[1vw]'>
         <div className={`hiddenmenu h-[60vh] w-[25vw] backdrop-blur-md bg-[#0000003b] mt-[2vh] rounded-[3vh] relative ${isMenuVisible ? 'block' : 'hidden'}`}> 
-          <button className='absolute right-[1vw]' onClick={toggleMenu}><i class="ri-close-circle-fill ri-3x"></i></button>
+          <button className='absolute right-[1vw] close' onClick={closeMenu}><i class="ri-close-circle-fill ri-3x"></i></button>
           <div className='absolute top-[10vh] left-[2vw] text-[1.8vw] font-light'>
             <h1>Events</h1>
             <h1>Core Members</h1>
