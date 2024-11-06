@@ -23,25 +23,28 @@ function Home() {
         <div className=' absolute right-0'><img src={circle} alt="" /></div>
       </div>
       <div className='w-screen h-screen'>
-        <h1 className='text-[4vw] font-bold pt-[10vh] pl-[5vw]'>Meet Your Mentor!</h1>
+        <h1 className='text-[4vw] font-bold pt-[10vh] pl-[6vw]'>Meet Your Mentor!</h1>
         <div className='flex'>
             <div className='h-[79vh] w-1/2  pl-[5vw] flex items-center'>
-                <div className='h-[70vh] w-[40vw] flex flex-col justify-between '>
+                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw]'>
                     <div className=''>
-                        <h1>Amogh Deshmukh.</h1>
-                        <h1>Assistant Dean</h1>
+                        <h1 className='text-[4vw] w-1/2 leading-[4vw] font-light'>Amogh Deshmukh.</h1>
+                        <h1 className='font-light mt-[1vh] text-[1.3vw]'>Assistant Dean</h1>
                     </div>
                     <div>
-                        <h1>With 10+ Years of Teaching Experience and Former Software Engineer at Dell!</h1>
-                        <h1 className='bg-white text-black w-fit px-[1.5vw] py-[.5vw] rounded-full'>LinkedIn</h1>
+                        <h1 className='text-[1.3vw]'>With 10+ Years of Teaching Experience and Former Software Engineer at Dell!</h1>
+                        <h1 className='bg-white text-black w-fit px-[1.5vw] py-[.5vw] rounded-full mt-[2vh] text-[1.3vw] font-medium'>LinkedIn</h1>
                     </div>
                 </div>
             </div>
             <div className=' h-[79vh] w-1/2  flex items-center justify-center'>
-                <div className='h-[70vh] w-[30vw] bg-zinc-800'></div>
+                <div className='h-[79vh] w-[35vw] bg-zinc-800 mb-[13vh]'>
+                    <img className='h-full w-full object-cover object-bottom' src={mentor} alt="" />
+                </div>
             </div>
         </div>
       </div>
+      <div className='h-screen w-screen bg-zinc-800'></div>
     </div>
   )
 }
