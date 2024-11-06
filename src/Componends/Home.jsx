@@ -5,6 +5,7 @@ import circle from '../assets/CodeXEnd.png'
 import 'remixicon/fonts/remixicon.css'
 
 import mentor from '../assets/mentor.png'
+import Footer from './Footer'
 
 function Home() {
   return (
@@ -24,7 +25,7 @@ function Home() {
       </div>
       <div className='w-screen h-screen'>
         <h1 className='text-[4vw] font-bold pt-[10vh] pl-[6vw]'>Meet Your Mentor!</h1>
-        <div className='flex'>
+        <div className='flex mt-[4vh]'>
             <div className='h-[79vh] w-1/2  pl-[5vw] flex items-center'>
                 <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw]'>
                     <div className=''>
@@ -33,7 +34,7 @@ function Home() {
                     </div>
                     <div>
                         <h1 className='text-[1.3vw]'>With 10+ Years of Teaching Experience and Former Software Engineer at Dell!</h1>
-                        <h1 className='bg-white text-black w-fit px-[1.5vw] py-[.5vw] rounded-full mt-[2vh] text-[1.3vw] font-medium'>LinkedIn</h1>
+                        <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[2vh] text-[1.1vw]'>LinkedIn</h1>
                     </div>
                 </div>
             </div>
@@ -44,7 +45,59 @@ function Home() {
             </div>
         </div>
       </div>
-      <div className='h-screen w-screen bg-zinc-800'></div>
+      <div className=' w-screen mt-[15vh]'>
+        <h1 className='text-[4vw] font-bold pt-[10vh] pl-[6vw] capitalize'>everything you need !</h1>
+        <div className='mt-[8vh] flex flex-col justify-center items-center'>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            </div>
+        </div>
+      </div>
+      <div className='w-screen '>
+      <div className='text-[2vw] flex mt-[15vh] justify-center'> <h1 className='w-[72vw] capitalize font-extralight'>By joining the CodeX Club, you'll have the opportunity to learn all of these skills directly from experts within our community. Engage in real-world projects and gain practical experience while collaborating closely with peers through our peer-to-peer learning approach. This hands-on experience will help you build and refine your skills in a supportive and interactive environment.</h1></div>
+      </div>
+      <Footer/>
     </div>
   )
 }
