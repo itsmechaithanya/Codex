@@ -49,49 +49,49 @@ function Home() {
       <div className=' w-screen mt-[15vh]'>
         <h1 className='text-[4vw] font-bold pt-[10vh] pl-[6vw] capitalize'>everything you need !</h1>
         <div className='mt-[8vh] flex flex-col justify-center items-center'>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
                 <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
                 <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Back-End Development</h1>
+                <h1 className='text-[#C5C5C5]'>MongoDB, Node.js, Express</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Machine Learning</h1>
+                <h1 className='text-[#C5C5C5]'>Python, Scikit-Learn, TensorFlow</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Deep Learning</h1>
+                <h1 className='text-[#C5C5C5]'>PyTorch, Keras, TensorFlow</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Generative AI</h1>
+                <h1 className='text-[#C5C5C5]'>DALL-E, GPT Models, GANs</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Data Analysis</h1>
+                <h1 className='text-[#C5C5C5]'>Pandas, NumPy, Tableau</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>LLMs</h1>
+                <h1 className='text-[#C5C5C5]'>GPT, BERT, Transformer Models</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Web Scraping</h1>
+                <h1 className='text-[#C5C5C5]'>BeautifulSoup, Scrapy, Selenium</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Cyber Security</h1>
+                <h1 className='text-[#C5C5C5]'>Network Security, Cryptography</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Ethical Hacking</h1>
+                <h1 className='text-[#C5C5C5]'>Kali Linux, Metasploit, Wireshark</h1>
             </div>
-            <div className='flex justify-between items-center  w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
+                <h1 className='font-semibold text-[2.2vw]'>Computer Vision</h1>
+                <h1 className='text-[#C5C5C5]'>OpenCV, YOLO, ResNet</h1>
             </div>
         </div>
       </div>
