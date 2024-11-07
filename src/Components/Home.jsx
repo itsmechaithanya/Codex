@@ -4,6 +4,7 @@ import hero from '../assets/hero.png'
 import circle from '../assets/CodeXEnd.png'
 import 'remixicon/fonts/remixicon.css'
 
+
 import mentor from '../assets/mentor.png'
 import Footer from './Footer'
 
