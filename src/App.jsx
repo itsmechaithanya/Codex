@@ -10,19 +10,19 @@ import Events from './Components/Events';
 
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
     
-    // Cleanup function to cancel the animation frame
-    return () => {
-      cancelAnimationFrame(raf);
-    };
-  }, []);
+  //   // Cleanup function to cancel the animation frame
+  //   return () => {
+  //     cancelAnimationFrame(raf);
+  //   };
+  // }, []);
 
   return (
     <div className='w-screen overflow-hidden'>
