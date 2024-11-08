@@ -18,7 +18,7 @@ function Navbar() {
   };
 
   return (
-  <div className='w-screen overflow-hidden'>
+  <div className='w-screen overflow-hidden h-fit'>
         <div className='pl-[5vw] pt-[3vh] fixed z-30 text-white'>
       <div className='w-[90vw] h-[8vh] rounded-full flex justify-between items-center px-[1vw] backdrop-blur-md bg-[#0000003b]  text-white border'>
         <Link to="/">
