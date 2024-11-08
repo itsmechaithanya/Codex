@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className='w-screen overflow-hidden h-fit'>
+    <div className='w-full overflow-hidden h-fit'>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
