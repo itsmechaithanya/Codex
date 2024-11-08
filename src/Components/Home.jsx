@@ -10,7 +10,7 @@ import Footer from './Footer'
 
 function Home() {
   return (
-    <div className='bg-black text-white'>
+    <div className='bg-black text-white w-screen overflow-hidden'>
       <div className='w-screen h-screen relative'>
         <div className='absolute z-10 bottom-[10vh] left-[5vw] text-[8vw] leading-[7.5vw] font-extrabold'>Code. <br /> Create. <br /> Collaborate.</div>
         <div><img className='h-[100vw] -bottom-[70vh] absolute' src={hero} alt="" /></div>

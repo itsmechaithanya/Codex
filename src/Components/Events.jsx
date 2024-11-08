@@ -3,7 +3,7 @@ import inner from '../assets/inner1.png'
 
 function Events() {
   return (
-    <div className='bg-black text-white'>
+    <div className='bg-black text-white w-screen overflow-hidden'>
       <div className='h-screen w-screen pt-[15vh] pl-[7vw] relative'>
         <h1 className='text-[8vw] font-extrabold h-[50vh] mt-[1vh]'>Events</h1>
         <p className='font-extralight text-[2vw] w-[85vw] capitalize absolute z-10'>From workshops and hackathons to tech talks and collaborative sessions, each event is entirely student-led, giving members valuable hands-on experience in planning and execution. This approach reflects the club's commitment to fostering a dynamic learning environment through engaging, member-driven activities.</p>
