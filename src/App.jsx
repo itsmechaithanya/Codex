@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='w-screen overflow-hidden'>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
