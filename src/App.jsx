@@ -12,8 +12,6 @@ import AuthForm from './Components/AuthForm';
 import AdminDashboard from './Components/AdminDashboard';
 import { AuthProvider } from './utility/AuthContext';
 
-
-
 function App() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -28,28 +26,36 @@ function App() {
   }, []);
 
 
+  const [users, setUsers] = useState([]);
 
-    const [Users,SetUsers] = useState([1,2,3,4,5,5])
+  const addUserCard = (data) => {
+    setUsers([...users, data]);
+  };
 
-    const HandleFormSubmitData = (data)=>{
-      SetUsers([...Users,[data]])
-      console.log(data)
-    }
+  const deleteUserCard = (index) => {
+    setUsers(users.filter((_, i) => i !== index));
+  };
+
 
   return (
+    <AuthProvider>
     <div className='w-full overflow-hidden h-fit'>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Events' element={<Events/>}/>
-        <Route path='/CoreMembers' element={<CoreMembers/>}/>
-        <Route path='/ExecutiveMembers' element={<ExecutiveMembers Users={Users}/>}/>
-        <Route path='/Collaborate' element={<Collaborate Users={Users}/>}/>
-        <Route path='/Form' element={<Form HandleFormSubmitData={HandleFormSubmitData}/>}/>
-        <Route path='/auth' element={<AuthForm />} />
-        <Route path='/admin' element={<AdminDashboard />} />
-      </Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Events' element={<Events />} />
+          <Route path='/CoreMembers' element={<CoreMembers />} />
+          <Route path='/ExecutiveMembers' element={<ExecutiveMembers users={users} />} />
+          <Route path='/Collaborate' element={<Collaborate />} />
+          <Route path='/Form' element={<Form />} />
+          <Route path='/auth' element={<AuthForm />} />
+          <Route
+            path='/admin'
+            element={<AdminDashboard users={users} addUserCard={addUserCard} deleteUserCard={deleteUserCard} />}
+          />
+        </Routes>
     </div>
+    </AuthProvider>
   )
 }
 

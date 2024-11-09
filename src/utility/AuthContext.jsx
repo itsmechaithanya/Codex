@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      setIsAdmin(user?.email === "admin@woxsen.edu.in"); // Update with admin's email
+      setIsAdmin(user?.email === "a@woxsen.edu.in"); // Replace with actual admin email
     });
     return () => unsubscribe();
   }, []);
