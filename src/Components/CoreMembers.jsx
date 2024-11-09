@@ -6,6 +6,7 @@ import C3 from '../assets/C3.png'
 import C4 from '../assets/C4.png'
 import C5 from '../assets/C5.png'
 import Footer from './Footer'
+import CardSM from './CardSM'
 
 
 function CoreMembers() {
@@ -94,57 +95,8 @@ function CoreMembers() {
             </div>
         </div>
       </div>
-      <div className='flex items-center justify-between px-[10vw] mt-[10vh]'>
-        <div className='h-[65vh] w-[24vw] flex flex-col items-center py-[3vh]'>
-            <div className='h-[40vh] w-[20vw] bg-zinc-800 overflow-hidden rounded-[1vw]'>
-              <img className='h-full w-full object-cover object-bottom' src={C5} alt="" />
-            </div>
-            <div><h1 className='text-[1.8vw] mt-[2vh]'>Harsh Morayya</h1></div>
-            <div className='text-center'><h1 className='text-[1.4vw] mt-[2vh] font-light'>Top-notch Software and Web Developer.</h1></div>
-            <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-        </div>
-        <div className='h-[65vh] w-[24vw]  flex flex-col items-center py-[3vh]'>
-            <div className='h-[40vh] w-[20vw] bg-zinc-800 overflow-hidden rounded-[1vw]'>
-              <img className='h-full w-full object-cover object-bottom' src={C5} alt="" />
-            </div>
-            <div><h1 className='text-[1.8vw] mt-[2vh]'>Harsh Morayya</h1></div>
-            <div className='text-center'><h1 className='text-[1.4vw] mt-[2vh] font-light'>Top-notch Software and Web Developer.</h1></div>
-            <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-        </div>
-        <div className='h-[65vh] w-[24vw] flex flex-col items-center py-[3vh]'>
-            <div className='h-[40vh] w-[20vw] bg-zinc-800 overflow-hidden rounded-[1vw]'>
-              <img className='h-full w-full object-cover object-bottom' src={C5} alt="" />
-            </div>
-            <div><h1 className='text-[1.8vw] mt-[2vh]'>Harsh Morayya</h1></div>
-            <div className='text-center'><h1 className='text-[1.4vw] mt-[2vh] font-light'>Top-notch Software and Web Developer.</h1></div>
-            <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-        </div>
-      </div>
-      <div className='flex items-center justify-between px-[10vw] mt-[5vh]'>
-        <div className='h-[65vh] w-[24vw]  flex flex-col items-center py-[3vh]'>
-            <div className='h-[40vh] w-[20vw] bg-zinc-800 overflow-hidden rounded-[1vw]'>
-              <img className='h-full w-full object-cover object-bottom' src={C5} alt="" />
-            </div>
-            <div><h1 className='text-[1.8vw] mt-[2vh]'>Harsh Morayya</h1></div>
-            <div className='text-center'><h1 className='text-[1.4vw] mt-[2vh] font-light'>Top-notch Software and Web Developer.</h1></div>
-            <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-        </div>
-        <div className='h-[65vh] w-[24vw]  flex flex-col items-center py-[3vh]'>
-            <div className='h-[40vh] w-[20vw] bg-zinc-800 overflow-hidden rounded-[1vw]'>
-              <img className='h-full w-full object-cover object-bottom' src={C5} alt="" />
-            </div>
-            <div><h1 className='text-[1.8vw] mt-[2vh]'>Harsh Morayya</h1></div>
-            <div className='text-center'><h1 className='text-[1.4vw] mt-[2vh] font-light'>Top-notch Software and Web Developer.</h1></div>
-            <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-        </div>
-        <div className='h-[65vh] w-[24vw] flex flex-col items-center py-[3vh]'>
-            <div className='h-[40vh] w-[20vw] bg-zinc-800 overflow-hidden rounded-[1vw]'>
-              <img className='h-full w-full object-cover object-bottom' src={C5} alt="" />
-            </div>
-            <div><h1 className='text-[1.8vw] mt-[2vh]'>Harsh Morayya</h1></div>
-            <div className='text-center'><h1 className='text-[1.4vw] mt-[2vh] font-light'>Top-notch Software and Web Developer.</h1></div>
-            <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-        </div>
+      <div className='w-screen flex justify-between mt-[5vh] px-[7vw] flex-wrap'>
+        {/* <CardSM Users={Users}/> */}
       </div>
       <Footer/>
     </div>

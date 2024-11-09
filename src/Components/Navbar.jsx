@@ -28,12 +28,12 @@ function Navbar() {
       </div>
       <div className='flex justify-end -mr-[1vw]'>
         <div className={`hiddenmenu h-[60vh] w-[25vw] backdrop-blur-md bg-[#0000003b] mt-[2vh] rounded-[3vh] relative ${isMenuVisible ? 'block' : 'hidden'}`}> 
-          <button className='absolute right-[1vw] close' onClick={closeMenu}><i class="ri-close-circle-fill ri-3x"></i></button>
+          <button className='absolute right-[1vw] close' onClick={closeMenu}><i className="ri-close-circle-fill ri-3x"></i></button>
           <div className='absolute top-[10vh] left-[2vw] text-[1.8vw] font-light '>
             <Link to="/Events" onClick={closeMenu}><h1>Events</h1></Link>
             <Link to="/CoreMembers" onClick={closeMenu}><h1>Core Members</h1></Link>
             <Link to="/ExecutiveMembers" onClick={closeMenu}><h1>Executive Members</h1></Link>
-            <Link to="/Collaborate" onClick={closeMenu}><h1>Collaborate<i class="ri-add-line"></i></h1></Link>
+            <Link to="/Collaborate" onClick={closeMenu}><h1>Collaborate<i className="ri-add-line"></i></h1></Link>
           </div>
           <div className='absolute top-[35vh] left-[2vw]'>
             <h1 className='font-bold text-[1.8vw] mt-[4vh]'>Get in touch !</h1>
