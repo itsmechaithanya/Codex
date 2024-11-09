@@ -29,7 +29,7 @@ function App() {
 
 
 
-    const [Users,SetUsers] = useState([])
+    const [Users,SetUsers] = useState([1,2,3,4,5,5])
 
     const HandleFormSubmitData = (data)=>{
       SetUsers([...Users,[data]])
