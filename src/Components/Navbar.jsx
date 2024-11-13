@@ -19,15 +19,15 @@ function Navbar() {
 
   return (
   <div className='w-full overflow-hidden h-fit'>
-        <div className='pl-[5vw] pt-[3vh] fixed z-30 text-white'>
-      <div className='w-[90vw] h-[8vh] rounded-full flex justify-between items-center px-[1vw] backdrop-blur-md bg-[#0000003b]  text-white border'>
+        <div className='lg:pl-[5vw] pl-[2.5vw] lg:pt-[3vh] pt-[2.5vw] fixed z-30 text-white'>
+      <div className='lg:w-[90vw] w-[95vw] lg:h-[8vh] h-[7vh] rounded-full flex justify-between items-center px-[1vw] backdrop-blur-md bg-[#0000003b]  text-white border'>
         <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-          <img className='ml-[1.3vw] h-[6vh]' src={logo} alt="" />
+          <img className='lg:ml-[1.3vw] ml-[5vw] lg:h-[6vh] h-[4vh]' src={logo} alt="" />
         </Link>
-        <button className='bg-white text-black px-[2vw] py-[1vh] rounded-full text-[1.1vw] open' onClick={openMenu}>Menu</button>
+        <button className='bg-white text-black lg:px-[2vw] px-[3vh] lg:py-[1vh] py-[1vh] mr-[1vw] lg:mr-[0vw] rounded-full lg:text-[1.1vw] text-[4vw] open ' onClick={openMenu}>Menu</button>
       </div>
-      <div className='flex justify-end -mr-[1vw]'>
-        <div className={`hiddenmenu h-[60vh] w-[25vw] backdrop-blur-md bg-[#0000003b] mt-[2vh] rounded-[3vh] relative ${isMenuVisible ? 'block' : 'hidden'}`}> 
+      <div className='flex justify-end mr-[-1vw]'>
+        <div className={`hiddenmenu lg:h-[60vh] lg:w-[25vw] w-[50vw] bg-[#d50000]  mt-[2vh] rounded-[3vh] relative ${isMenuVisible ? 'block' : 'hidden'}`}> 
           <button className='absolute right-[1vw] close' onClick={closeMenu}><i className="ri-close-circle-fill ri-3x"></i></button>
           <div className='absolute top-[10vh] left-[2vw] text-[1.8vw] font-light '>
             <Link to="/Events" onClick={() => { closeMenu(); window.scrollTo(0, 0); }}><h1>Events</h1></Link>
