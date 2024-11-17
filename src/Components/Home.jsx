@@ -26,77 +26,77 @@ function Home() {
       </div>
       <div className='w-full h-screen'>
         <h1 className='lg:text-[4vw] text-[4vh] font-bold pt-[10vh] pl-[6vw]'>Meet Your Mentor!</h1>
-        <div className='flex flex-col-reverse lg:flex-row mt-[4vh]'>
-            <div className='h-[79vh] lg:w-1/2  pl-[5vw] flex items-center bg-gray-800'>
-                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw] pb-[3vh]'>
-                    <div className=''>
-                        <h1 className='text-[4vw] w-1/2 leading-[4vw] font-light'>Amogh Deshmukh.</h1>
-                        <h1 className='font-light mt-[1vh] text-[1.3vw]'>Assistant Dean</h1>
+        <div className='flex flex-col-reverse lg:flex-row lg:mt-[4vh]'>
+            <div className='lg:h-[79vh] h-[40vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
+                <div className='lg:h-[70vh]  lg:w-[30vw] w-[100vw] flex flex-col lg:justify-between lg:pl-[5vw] lg:pb-[3vh] lg:px-[0vw] px-[5vw]'>
+                    <div className='lg:flex-col flex flex-col justify-center lg:text-left text-center'>
+                        <h1 className='text-[4vh] lg:text-[4vw] lg:w-1/2 lg:leading-[4vw] leading-[4vh] font-light'>Amogh Deshmukh.</h1>
+                        <h1 className='font-light mt-[1vh] lg:text-[1.3vw] text-[1.8vh]'>Assistant Dean</h1>
                     </div>
-                    <div>
-                        <h1 className='text-[1.3vw]'>With 10+ Years of Teaching Experience and Former Software Engineer at Dell!</h1>
-                        <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[2vh] text-[1.1vw]'>LinkedIn</h1>
+                    <div className='flex justify-center text-center lg:text-left  flex-col lg:items-start items-center'>
+                        <h1 className='text-[2vh] lg:text-[1.3vw] lg:mt-[0vh] mt-[10vh]'>With 10+ Years of Teaching Experience and Former Software Engineer at Dell!</h1>
+                        <h1 className='bg-white text-black lg:px-[2vw] px-[3vh] lg:py-[1vh] py-[1vh] mr-[1vw] lg:mr-[0vw] rounded-full lg:text-[1.1vw] mt-[2vh] text-[4vw]'>LinkedIn</h1>
                     </div>
                 </div>
             </div>
-            <div className=' h-[79vh] lg:w-1/2  flex items-center justify-center'>
-                <div className='h-[79vh] lg:w-[35vw] bg-zinc-800 mb-[13vh]'>
+            <div className=' lg:h-[79vh] h-fit lg:w-1/2  flex items-center justify-center'>
+                <div className='lg:h-[79vh] w-[90vw]  rounded-[3vh] overflow-hidden h-[55vh] lg:w-[35vw] bg-zinc-800 lg:mb-[13vh]'>
                     <img className='h-full w-full object-cover object-bottom' src={mentor} alt="" />
                 </div>
             </div>
         </div>
       </div>
-      <div className=' w-full mt-[15vh]'>
-        <h1 className='text-[4vw] font-bold pt-[10vh] pl-[6vw] capitalize'>everything you need !</h1>
+      <div className=' w-full mt-[10vh] lg:mt-[15vh]'>
+        <h1 className='lg:text-[4vw] text-[4vh] font-bold pt-[10vh] pl-[6vw] capitalize'>everything you need !</h1>
         <div className='mt-[8vh] flex flex-col justify-center items-center'>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>React JS, HTML, CSS, JavaScript</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Front-End Development</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>React JS, HTML, CSS, JavaScript</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Back-End Development</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>MongoDB, Node.js, Express</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Back-End Development</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>MongoDB, Node.js, Express</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Machine Learning</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>Python, Scikit-Learn, TensorFlow</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Machine Learning</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Python, Scikit-Learn, TensorFlow</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Deep Learning</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>PyTorch, Keras, TensorFlow</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Deep Learning</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>PyTorch, Keras, TensorFlow</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Generative AI</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>DALL-E, GPT Models, GANs</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Generative AI</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1`vh] lg:text-[1.1vw]'>DALL-E, GPT Models, GANs</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Data Analysis</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>Pandas, NumPy, Tableau</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Data Analysis</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Pandas, NumPy, Tableau</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>LLMs</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>GPT, BERT, Transformer Models</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>LLMs</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>GPT, BERT, Transformer Models</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Web Scraping</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>BeautifulSoup, Scrapy, Selenium</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Web Scraping</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>BeautifulSoup, Scrapy, Selenium</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Cyber Security</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>Network Security, Cryptography</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Cyber Security</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Network Security, Cryptography</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Ethical Hacking</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>Kali Linux, Metasploit, Wireshark</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Ethical Hacking</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Kali Linux, Metasploit, Wireshark</h1>
             </div>
-            <div className='flex justify-between items-center w-[80vw] h-[10vh]'>
-                <h1 className='font-semibold text-[2.2vw]'>Computer Vision</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vw]'>OpenCV, YOLO, ResNet</h1>
+            <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
+                <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Computer Vision</h1>
+                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>OpenCV, YOLO, ResNet</h1>
             </div>
         </div>
       </div>
       <div className='w-full '>
-      <div className='text-[2vw] flex mt-[15vh] justify-center'> <h1 className='w-[72vw] capitalize font-extralight'>By joining the CodeX Club, you'll have the opportunity to learn all of these skills directly from experts within our community. Engage in real-world projects and gain practical experience while collaborating closely with peers through our peer-to-peer learning approach. This hands-on experience will help you build and refine your skills in a supportive and interactive environment.</h1></div>
+      <div className='text-[2vh] lg:text-[2vw] flex mt-[15vh] justify-center'> <h1 className='lg:w-[72vw] w-[80vw] capitalize font-extralight'>By joining the CodeX Club, you'll have the opportunity to learn all of these skills directly from experts within our community. Engage in real-world projects and gain practical experience while collaborating closely with peers through our peer-to-peer learning approach. This hands-on experience will help you build and refine your skills in a supportive and interactive environment.</h1></div>
       </div>
       <Footer/>
     </div>
