@@ -26,7 +26,7 @@ function Navbar() {
         </Link>
         <button className='bg-white text-black lg:px-[2vw] px-[3vh] lg:py-[1vh] py-[1vh] mr-[1vw] lg:mr-[0vw] rounded-full lg:text-[1.1vw] text-[4vw] open ' onClick={openMenu}>Menu</button>
       </div>
-      <div className='flex justify-end mr-[-1vw] bg-red-400'>
+      <div className='flex justify-end mr-[-1vw]'>
         <div className={`hiddenmenu lg:h-[60vh] lg:w-[25vw] w-[50vw] mt-[2vh] bg-red-700 rounded-[3vh] relative ${isMenuVisible ? 'block' : 'hidden'}`}> 
           <button className='absolute right-[1vw] close' onClick={closeMenu}><i className="ri-close-circle-fill ri-3x"></i></button>
           <div className='absolute top-[10vh] left-[2vw] text-[1.8vw] font-light '>
