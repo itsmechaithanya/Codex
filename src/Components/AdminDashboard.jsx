@@ -42,8 +42,9 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
   };
 
   return (
-    <div className='w-screen h-screen flex justify-center items-center flex-col'>
-      <h2>Admin Dashboard</h2>
+    <div>
+     <div className='w-screen h-screen flex justify-center items-center flex-col'>
+     <h2>Admin Dashboard</h2>
       <h3>Add a New Member Card</h3>
       <form onSubmit={handleSubmit} className="flex flex-col items-center">
         <input
@@ -77,9 +78,11 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
           Add Card
         </button>
       </form>
+     </div>
 
+      <div className='flex justify-center items-center flex-col'>
       <h3 className="mt-10">Existing Member Cards</h3>
-      <div className="w-full mt-5 flex flex-wrap">
+      <div className="w-full h-screen overflow-auto mt-5 flex flex-wrap">
         {users.map((user, index) => (
           <div key={index} className="w-1/3 p-2">
             <div className='border p-4 rounded shadow-md bg-white'>
@@ -102,6 +105,7 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

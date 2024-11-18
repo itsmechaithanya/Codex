@@ -19,8 +19,8 @@ function CoreMembers() {
         <img className=' absolute lg:h-[150vh] object-cover lg:top-[5vh] lg:left-[-35vw] left-[-35vw] top-[40vh] h-[70vh] z-0' src={inner} alt="" />
       </div>
       <div className=' w-screen'>
-      <div className='flex flex-col-reverse lg:flex-row lg:mt-[4vh]'>
-            <div className='lg:h-[79vh] h-[40vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
+      <div className='flex flex-col-reverse lg:flex-row lg:mt-[4vh] bg-red-00'>
+            <div className='lg:h-[79vh] h-[50vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
                 <div className='lg:h-[70vh]  lg:w-[30vw] w-[100vw] flex flex-col lg:justify-between lg:pl-[5vw] lg:pb-[3vh] lg:px-[0vw] px-[5vw]'>
                     <div className='lg:flex-col flex flex-col justify-center lg:text-left text-center'>
                         <h1 className='text-[4vh] lg:text-[4vw] lg:leading-[4vw] leading-[4vh] font-light'>Shravani Ankur Wanjari.</h1>
@@ -38,8 +38,8 @@ function CoreMembers() {
                 </div>
             </div>
         </div>
-      <div className='flex flex-col-reverse lg:flex-row lg:mt-[4vh]'>
-            <div className='lg:h-[79vh] h-[40vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
+      <div className='flex flex-col-reverse lg:flex-row-reverse lg:mt-[4vh] bg-green-00'>
+            <div className='lg:h-[79vh] h-[50vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
                 <div className='lg:h-[70vh]  lg:w-[30vw] w-[100vw] flex flex-col lg:justify-between lg:pl-[5vw] lg:pb-[3vh] lg:px-[0vw] px-[5vw]'>
                     <div className='lg:flex-col flex flex-col justify-center lg:text-left text-center'>
                         <h1 className='text-[4vh] lg:text-[4vw] lg:w-1/2 lg:leading-[4vw] leading-[4vh] font-light'>Dhruval Padia.</h1>
@@ -57,8 +57,8 @@ function CoreMembers() {
                 </div>
             </div>
         </div>
-      <div className='flex flex-col-reverse lg:flex-row lg:mt-[4vh]'>
-            <div className='lg:h-[79vh] h-[40vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
+      <div className='flex flex-col-reverse lg:flex-row lg:mt-[4vh] bg-blue-00'>
+            <div className='lg:h-[79vh] h-[50vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
                 <div className='lg:h-[70vh]  lg:w-[30vw] w-[100vw] flex flex-col lg:justify-between lg:pl-[5vw] lg:pb-[3vh] lg:px-[0vw] px-[5vw]'>
                     <div className='lg:flex-col flex flex-col justify-center lg:text-left text-center'>
                         <h1 className='text-[4vh] lg:text-[4vw] lg:w-1/2 lg:leading-[4vw] leading-[4vh] font-light'>Sreeya Chatterjee.</h1>
@@ -76,8 +76,8 @@ function CoreMembers() {
                 </div>
             </div>
         </div>
-      <div className='flex flex-col-reverse lg:flex-row lg:mt-[4vh]'>
-            <div className='lg:h-[79vh] h-[40vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
+      <div className='flex flex-col-reverse lg:flex-row-reverse lg:mt-[4vh] bg-orange-00'>
+            <div className='lg:h-[79vh] h-[50vh] lg:w-1/2  lg:pl-[5vw] flex items-center'>
                 <div className='lg:h-[70vh]  lg:w-[30vw] w-[100vw] flex flex-col lg:justify-between lg:pl-[5vw] lg:pb-[3vh] lg:px-[0vw] px-[5vw]'>
                     <div className='lg:flex-col flex flex-col justify-center lg:text-left text-center'>
                         <h1 className='text-[4vh] lg:text-[4vw] lg:w-1/2 lg:leading-[4vw] leading-[4vh] font-light'>Rudra Ayachit.</h1>
@@ -91,82 +91,6 @@ function CoreMembers() {
             </div>
             <div className=' lg:h-[79vh] h-fit lg:w-1/2  flex items-center justify-center'>
                 <div className='lg:h-[79vh] w-[90vw]  rounded-[3vh] overflow-hidden h-[55vh] lg:w-[35vw] bg-zinc-800 lg:mb-[13vh]'>
-                    <img className='h-full w-full object-cover object-bottom' src={C4} alt="" />
-                </div>
-            </div>
-        </div>
-        <div className='flex mt-[7vh]'>
-            <div className='h-[79vh] w-1/2  pl-[5vw] flex items-center'>
-                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw] pb-[3vh]'>
-                    <div className=''>
-                        <h1 className='text-[4vw] leading-[4vw] font-light'>Shravani Ankur Wanjari.</h1>
-                        <h1 className='font-light mt-[1vh] text-[1.3vw]'>President</h1>
-                    </div>
-                    <div>
-                        <h1 className='text-[1.3vw]'>Currently an intern at the AI Research Centre at Woxsen University, also engaged in a UI/UX Design internship at Ozibook and serving as an Internshala Student Partner.</h1>
-                        <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-                    </div>
-                </div>
-            </div>
-            <div className=' h-[79vh] w-1/2  flex items-center justify-center'>
-                <div className='h-[79vh] w-[35vw] overflow-hidden bg-zinc-800 mb-[13vh]'>
-                    <img className='h-full w-full object-cover object-bottom' src={C1} alt="" />
-                </div>
-            </div>
-        </div>
-        <div className='flex flex-row-reverse mt-[15vh]'>
-            <div className='h-[79vh] w-1/2  pl-[5vw] flex items-center'>
-                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw] pb-[3vh]'>
-                    <div className=''>
-                        <h1 className='text-[4vw] leading-[4vw] font-light'>Dhruval Padia.</h1>
-                        <h1 className='font-light mt-[1vh] text-[1.3vw]'>Vice President</h1>
-                    </div>
-                    <div>
-                        <h1 className='text-[1.3vw]'>Expertise in backend development includes API design, real-time data processing, and database management. Focus areas in deep learning are NLP and computer vision, with data analytics skills in processing, modeling, and visualization for complex challenges.</h1>
-                        <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-                    </div>
-                </div>
-            </div>
-            <div className=' h-[79vh] w-1/2  flex items-center justify-center'>
-                <div className='h-[79vh] w-[35vw] overflow-hidden bg-zinc-800 mb-[13vh]'>
-                    <img className='h-full w-full object-cover object-bottom' src={C2} alt="" />
-                </div>
-            </div>
-        </div>
-        <div className='flex mt-[7vh]'>
-            <div className='h-[79vh] w-1/2  pl-[5vw] flex items-center'>
-                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw] pb-[3vh]'>
-                    <div className=''>
-                        <h1 className='text-[4vw] leading-[4vw] font-light'>Sreeya Chatterjee.</h1>
-                        <h1 className='font-light mt-[1vh] text-[1.3vw]'>Event Management Lead</h1>
-                    </div>
-                    <div>
-                        <h1 className='text-[1.3vw]'>A national-level public speaker and winner of a national essay competition by the Ministry of NHERDO in 2021, with strong proficiency in C and Java, now focused on advancing Python skills.</h1>
-                        <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-                    </div>
-                </div>
-            </div>
-            <div className=' h-[79vh] w-1/2  flex items-center justify-center'>
-                <div className='h-[79vh] w-[35vw] overflow-hidden bg-zinc-800 mb-[13vh]'>
-                    <img className='h-full w-full object-cover object-bottom' src={C3} alt="" />
-                </div>
-            </div>
-        </div>
-        <div className='flex flex-row-reverse mt-[15vh]'>
-            <div className='h-[79vh] w-1/2  pl-[5vw] flex items-center'>
-                <div className='h-[70vh] w-[30vw] flex flex-col justify-between pl-[5vw] pb-[3vh]'>
-                    <div className=''>
-                        <h1 className='text-[4vw] leading-[4vw] font-light'>Rudra Ayachit.</h1>
-                        <h1 className='font-light mt-[1vh] text-[1.3vw]'>Event management lead</h1>
-                    </div>
-                    <div>
-                        <h1 className='text-[1.3vw] '>More into Space Technologies, Robotics (Machine Ethics and Artificial Sentience), Digital Electronics & Computer Vision.</h1>
-                        <h1 className='bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full mt-[3vh] text-[1.1vw]'>LinkedIn</h1>
-                    </div>
-                </div>
-            </div>
-            <div className=' h-[79vh] w-1/2  flex items-center justify-center'>
-                <div className='h-[79vh] w-[35vw] overflow-hidden bg-zinc-800 mb-[13vh]'>
                     <img className='h-full w-full object-cover object-bottom' src={C4} alt="" />
                 </div>
             </div>
