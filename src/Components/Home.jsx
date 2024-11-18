@@ -51,47 +51,47 @@ function Home() {
         <div className='mt-[8vh] flex flex-col justify-center items-center'>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Front-End Development</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>React JS, HTML, CSS, JavaScript</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>React JS, HTML, CSS, JavaScript</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Back-End Development</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>MongoDB, Node.js, Express</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>MongoDB, Node.js, Express</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Machine Learning</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Python, Scikit-Learn, TensorFlow</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>Python, Scikit-Learn, TensorFlow</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Deep Learning</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>PyTorch, Keras, TensorFlow</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>PyTorch, Keras, TensorFlow</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Generative AI</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1`vh] lg:text-[1.1vw]'>DALL-E, GPT Models, GANs</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>DALL-E, GPT Models, GANs</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Data Analysis</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Pandas, NumPy, Tableau</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>Pandas, NumPy, Tableau</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>LLMs</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>GPT, BERT, Transformer Models</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>GPT, BERT, Transformer Models</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Web Scraping</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>BeautifulSoup, Scrapy, Selenium</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>BeautifulSoup, Scrapy, Selenium</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Cyber Security</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Network Security, Cryptography</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>Network Security, Cryptography</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Ethical Hacking</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>Kali Linux, Metasploit, Wireshark</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>Kali Linux, Metasploit, Wireshark</h1>
             </div>
             <div className='flex lg:flex-row flex-col lg:justify-between justify-center items-center w-[80vw] h-[11vh] lg:h-[10vh]'>
                 <h1 className='font-semibold text-[2.7vh] lg:text-[2.2vw]'>Computer Vision</h1>
-                <h1 className='text-[#C5C5C5] text-[1.1vh] lg:text-[1.1vw]'>OpenCV, YOLO, ResNet</h1>
+                <h1 className='text-[#C5C5C5] text-[1.5vh] lg:text-[1.1vw]'>OpenCV, YOLO, ResNet</h1>
             </div>
         </div>
       </div>
