@@ -1,21 +1,30 @@
 // src/Components/AuthForm.jsx
-import React, { useState } from 'react';
-import { loginUser } from '../utility/authService';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from "react";
+
+import { useNavigate } from "react-router-dom";
+import { login } from "./Api";
+import { AuthContext } from "./Auth-context";
+import { message } from "antd";
 
 function AuthForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const auth = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await loginUser(email, password); // Attempt login
-      navigate('/admin'); // Redirect to admin page upon successful login
+      const response = await login({ email, password }); // Attempt login
+
+      const data = await response.json();
+      console.log(data);
+      auth.login(data.userId, data.token, data.email, data.role);
+      message.success("Logged in successfully");
+      navigate("/admin"); // Redirect to admin page upon successful login
     } catch (err) {
-      setError('Invalid login credentials.'); // Display error if login fails
+      setError("Invalid login credentials."); // Display error if login fails
     }
   };
 
@@ -38,11 +47,15 @@ function AuthForm() {
             placeholder="Enter your password"
             className="w-full px-4 py-2 mb-4 border rounded"
           />
-          <button type="submit" className="w-full py-2 bg-blue-500 text-white rounded">
+          <button
+            type="submit"
+            className="w-full py-2 bg-blue-500 text-white rounded"
+          >
             Login
           </button>
         </form>
-        {error && <p className="mt-2 text-red-500 text-center">{error}</p>} {/* Display error if login fails */}
+        {error && <p className="mt-2 text-red-500 text-center">{error}</p>}{" "}
+        {/* Display error if login fails */}
       </div>
     </div>
   );
