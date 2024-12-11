@@ -11,13 +11,13 @@ import { Button, message } from "antd";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const [mentors, setMentor] = useState([]);
+  const [mentors, setMentors] = useState([]);
   useEffect(() => {
     const fetchMentorData = async () => {
       try {
         const response = await fetchMentors();
         const data = await response.json();
-        setMentor(data?.mentors);
+        setMentors(data?.mentors);
         console.log(data);
       } catch (err) {
         message.error("Something went wrong while fetching the data");
@@ -33,7 +33,6 @@ function Home() {
       console.error("No LinkedIn URL provided");
     }
   };
-  console.log(import.meta.env.REACT_APP_BACKEND_URL);
 
   return (
     <div className="bg-black text-white w-full overflow-hidden h-fit">
@@ -115,7 +114,7 @@ function Home() {
                   </div>
                   <div className="flex justify-center text-center lg:text-left  flex-col lg:items-start items-center">
                     <h1 className="text-[2vh] lg:text-[1.3vw] lg:mt-[0vh] mt-[10vh]">
-                      {mentor.description}
+                      {mentor?.description}
                     </h1>{" "}
                     <h1
                       onClick={() => linkedIn(mentor?.linkedIn)}
