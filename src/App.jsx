@@ -10,7 +10,6 @@ import Events from "./Components/Events";
 import Form from "./Components/Form";
 import AuthForm from "./Components/AuthForm";
 import AdminDashboard from "./Components/AdminDashboard";
-import { AuthProvider } from "./utility/AuthContext";
 import { AuthContext } from "./Components/Auth-context";
 import { useAuth } from "./Components/auth-hook";
 

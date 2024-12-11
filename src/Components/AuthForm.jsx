@@ -19,7 +19,7 @@ function AuthForm() {
       const response = await login({ email, password }); // Attempt login
 
       const data = await response.json();
-      console.log(data);
+
       auth.login(data.userId, data.token, data.email, data.role);
       message.success("Logged in successfully");
       navigate("/admin"); // Redirect to admin page upon successful login

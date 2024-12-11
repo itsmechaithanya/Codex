@@ -11,8 +11,15 @@ export const login = async (data) => {
   }
   return response;
 };
-export const fetchMembers = async (data) => {
-  const response = await fetch(`${BASE_URL}/member/get/all/members`);
+export const fetchMentors = async () => {
+  const response = await fetch(`${BASE_URL}/api/codex/mentor/get/all/mentors`);
+  if (!response.ok) {
+    throw new Error("Failed to authenticate");
+  }
+  return response;
+};
+export const fetchMembers = async () => {
+  const response = await fetch(`${BASE_URL}/api/codex/member/get/all/members`);
   if (!response.ok) {
     throw new Error("Failed to authenticate");
   }
