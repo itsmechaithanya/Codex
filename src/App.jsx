@@ -12,6 +12,12 @@ import AuthForm from "./Components/AuthForm";
 import AdminDashboard from "./Components/AdminDashboard";
 import { AuthContext } from "./Components/Auth-context";
 import { useAuth } from "./Components/auth-hook";
+import Mentors from "./Components/Mentors";
+import Members from "./Components/Members";
+import ManageEvents from "./Components/ManageEvents";
+import AddMentor from "./Components/AddMentor";
+import AddMember from "./Components/AddMember";
+import AddEvent from "./Components/AddEvent";
 
 function App() {
   useEffect(() => {
@@ -50,6 +56,15 @@ function App() {
         <Route path="/Collaborate" element={<Collaborate />} />
         <Route path="/Form" element={<Form />} />
         <Route path="/auth" element={<AuthForm />} />
+        <Route path="/mentors" element={<Mentors />} />
+        <Route path="/members" element={<Members />} />
+        <Route path="/manage/events" element={<ManageEvents />} />
+        <Route path="/add/mentor" element={<AddMentor />} />
+        <Route path="/edit/mentor/:mentorId" element={<AddMentor />} />
+        <Route path="/add/member" element={<AddMember />} />
+        <Route path="/edit/member/:memberId" element={<AddMember />} />
+        <Route path="/add/event" element={<AddEvent />} />
+        <Route path="/edit/event/:eventId" element={<AddEvent />} />
         <Route
           path="/admin"
           element={
