@@ -113,7 +113,7 @@ function AddMember() {
             label="First Name"
             name="firstName"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please input your first name!",
               },
@@ -126,7 +126,7 @@ function AddMember() {
             label="Last Name"
             name="lastName"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please input your last name!",
               },
@@ -139,7 +139,7 @@ function AddMember() {
             label="Title"
             name="title"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please input your title!",
               },
@@ -152,7 +152,7 @@ function AddMember() {
             label="Description"
             name="description"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please input your description!",
               },
@@ -165,7 +165,7 @@ function AddMember() {
             label="Email"
             name="email"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please input your email!",
               },
@@ -182,7 +182,7 @@ function AddMember() {
             label="LinkedIn"
             name="linkedIn"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please input your LinkedIn URL!",
               },
@@ -194,7 +194,7 @@ function AddMember() {
             label="Role"
             name="role"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please input your role!",
               },
@@ -212,7 +212,7 @@ function AddMember() {
             label="Image"
             name="image"
             rules={[
-              {
+              !memberId.memberId && {
                 required: true,
                 message: "Please upload an image!",
               },

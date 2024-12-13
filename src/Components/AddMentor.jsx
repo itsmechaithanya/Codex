@@ -113,7 +113,7 @@ function AddMentor() {
             label="First Name"
             name="firstName"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your first name!",
               },
@@ -126,7 +126,7 @@ function AddMentor() {
             label="Last Name"
             name="lastName"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your last name!",
               },
@@ -139,7 +139,7 @@ function AddMentor() {
             label="Title"
             name="title"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your title!",
               },
@@ -152,7 +152,7 @@ function AddMentor() {
             label="Description"
             name="description"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your description!",
               },
@@ -165,7 +165,7 @@ function AddMentor() {
             label="Email"
             name="email"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your email!",
               },
@@ -182,7 +182,7 @@ function AddMentor() {
             label="Password"
             name="password"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your password!",
               },
@@ -195,7 +195,7 @@ function AddMentor() {
             label="Phone Number"
             name="mobile"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your phone number!",
               },
@@ -214,7 +214,7 @@ function AddMentor() {
             label="LinkedIn"
             name="linkedIn"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please input your LinkedIn URL!",
               },
@@ -227,7 +227,7 @@ function AddMentor() {
             label="Image"
             name="image"
             rules={[
-              {
+              !mentorId.mentorId && {
                 required: true,
                 message: "Please upload an image!",
               },

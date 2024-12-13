@@ -8,14 +8,14 @@ import C5 from "../assets/C5.png";
 import Footer from "./Footer";
 import CardSM from "./CardSM";
 
-import { fetchMembers } from "./Api";
+import { fetchCoreMembers, fetchMembers } from "./Api";
 
 function CoreMembers() {
   const [members, setMembers] = useState([]);
   useEffect(() => {
     const fetchMemberData = async () => {
       try {
-        const response = await fetchMembers();
+        const response = await fetchCoreMembers();
         const data = await response.json();
         setMembers(data?.members);
         console.log(data);
@@ -95,7 +95,7 @@ function CoreMembers() {
                       "/" +
                       member?.image
                     }`}
-                    alt=""
+                    alt={member.firstName + " " + member.lastName}
                   />
                 </div>
               </div>

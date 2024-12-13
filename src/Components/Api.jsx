@@ -72,6 +72,24 @@ export const fetchMembers = async () => {
   }
   return response;
 };
+export const fetchCoreMembers = async () => {
+  const response = await fetch(
+    `${BASE_URL}/api/codex/member/get/members/byrole/Core_Member`
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return response;
+};
+export const fetchExecutiveMembers = async () => {
+  const response = await fetch(
+    `${BASE_URL}/api/codex/member/get/members/byrole/Executive_Member`
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return response;
+};
 export const updateMemberById = async (id, data) => {
   const response = await fetch(
     `${BASE_URL}/api/codex/member/update/member/byid/${id.memberId}`,

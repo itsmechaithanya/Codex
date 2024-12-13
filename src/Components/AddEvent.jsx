@@ -128,7 +128,7 @@ function AddEvent() {
             label="Title"
             name="title"
             rules={[
-              {
+              !eventId.eventId && {
                 required: true,
                 message: "Please input your title!",
               },
@@ -141,7 +141,7 @@ function AddEvent() {
             label="Description"
             name="description"
             rules={[
-              {
+              !eventId.eventId && {
                 required: true,
                 message: "Please input your description!",
               },
@@ -154,7 +154,7 @@ function AddEvent() {
             label="Date"
             name="date"
             rules={[
-              {
+              !eventId.eventId && {
                 required: true,
                 message: "Please input date!",
               },
@@ -167,7 +167,7 @@ function AddEvent() {
             label="Image"
             name="image"
             rules={[
-              {
+              !eventId.eventId && {
                 required: true,
                 message: "Please upload an image!",
               },
