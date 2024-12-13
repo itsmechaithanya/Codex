@@ -55,7 +55,7 @@ function App() {
         />
         <Route path="/Collaborate" element={<Collaborate />} />
         <Route path="/Form" element={<Form />} />
-        <Route path="/auth" element={<AuthForm />} />
+        {/* <Route path="/auth" element={<AuthForm />} /> */}
         <Route path="/mentors" element={<Mentors />} />
         <Route path="/members" element={<Members />} />
         <Route path="/manage/events" element={<ManageEvents />} />
