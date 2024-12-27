@@ -6,11 +6,12 @@ import "remixicon/fonts/remixicon.css";
 
 import mentor from "../assets/mentor.png";
 import Footer from "./Footer";
-import { fetchMentors } from "./Api";
+import Api from "./Api";
 import { Button, message } from "antd";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const { fetchMentors } = Api();
   const [mentors, setMentors] = useState([]);
   useEffect(() => {
     const fetchMentorData = async () => {

@@ -10,7 +10,7 @@ router.get("/get/members/byrole/:role", MemberControllers.getMembersByRole);
 router.get("/get/member/byid/:id", MemberControllers.getMemberById);
 router.post(
   "/create/member",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   imageUpload.single("image"),
   [
     check("firstName").isLength({ min: 2, max: 255 }),
@@ -27,19 +27,19 @@ router.post(
 router.patch(
   "/update/member/byid/:id",
   imageUpload.single("image"),
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   MemberControllers.updateMemberById
 );
 
 router.patch(
   "/update/image/byid/:id",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   imageUpload.single("image"),
   MemberControllers.updateImageById
 );
 router.delete(
   "/delete/member/byid/:id",
-  // checkAuth("Member"),
+  checkAuth("Member"),
   MemberControllers.deleteMember
 );
 module.exports = router;

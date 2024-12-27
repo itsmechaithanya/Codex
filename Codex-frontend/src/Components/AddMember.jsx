@@ -1,11 +1,12 @@
 import { Button, Form, Input, message, Select, Space } from "antd";
 import React, { useEffect, useState } from "react";
-import { addMember, fetchMemberById, updateMemberById } from "./Api";
-import { useNavigate, useParams } from "react-router-dom";
 
+import { useNavigate, useParams } from "react-router-dom";
+import Api from "./Api.jsx";
 const { Option } = Select;
 
 function AddMember() {
+  const { addMember, fetchMemberById, updateMemberById } = Api();
   const [image, setImage] = useState(null); // Manage image state separately
   const [member, setMember] = useState(null);
   const [loading, setLoading] = useState(true); // To show loading until data is fetched

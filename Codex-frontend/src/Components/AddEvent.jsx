@@ -1,11 +1,12 @@
 import { Button, DatePicker, Form, Input, message, Select, Space } from "antd";
 import React, { useEffect, useState } from "react";
-import { addEvent, fetchEventById, updateEventById } from "./Api";
 import { useNavigate, useParams } from "react-router-dom";
+import Api from "./Api.jsx";
 
 const { Option } = Select;
 
 function AddEvent() {
+  const { addEvent, fetchEventById, updateEventById } = Api();
   const [image, setImage] = useState(null); // Manage image state separately
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true); // To show loading until data is fetched

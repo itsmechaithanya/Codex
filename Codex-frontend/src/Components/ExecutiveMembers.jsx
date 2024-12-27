@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import inner from "../assets/inner1.png";
 import Footer from "./Footer";
 import CardSM from "./CardSM";
-import { fetchExecutiveMembers } from "./Api";
+import Api from "./Api";
 
 function ExecutiveMembers({ users = [] }) {
+  const { fetchExecutiveMembers } = Api();
   const [members, setMembers] = useState([]);
   useEffect(() => {
     const fetchMemberData = async () => {

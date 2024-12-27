@@ -9,7 +9,7 @@ router.get("/get/all/mentors", mentorControllers.getAllMentors);
 router.get("/get/mentor/byid/:id", mentorControllers.getMentorById);
 router.post(
   "/create/mentor",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   imageUpload.single("image"),
   [
     check("firstName").isLength({ min: 2, max: 255 }),
@@ -26,24 +26,24 @@ router.post("/login", mentorControllers.login);
 router.patch(
   "/update/mentor/byid/:id",
   imageUpload.single("image"),
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   mentorControllers.updateMentorById
 );
 
 router.patch(
   "/update/password/byemail/:email",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   mentorControllers.forgotPassword
 );
 router.patch(
   "/update/image/byid/:id",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   imageUpload.single("image"),
   mentorControllers.updateImageById
 );
 router.delete(
   "/delete/mentor/byid/:id",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   mentorControllers.deleteMentor
 );
 module.exports = router;

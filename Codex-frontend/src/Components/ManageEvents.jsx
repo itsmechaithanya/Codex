@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Dropdown, Menu, message, Modal } from "antd";
 import { SettingOutlined } from "@ant-design/icons";
-import { deleteEvent, fetchEvents } from "./Api";
+
 import { useNavigate } from "react-router-dom";
+import Api from "./Api";
 
 const { Meta } = Card;
 
 function ManageEvents() {
+  const { deleteEvent, fetchEvents } = Api();
   const [events, setEvents] = useState([]);
   const [actionToShow, setActionToShow] = useState(null); // State to store selected action
   const [selectedEvent, setSelectedEvent] = useState(null);

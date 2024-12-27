@@ -7,10 +7,10 @@ import C4 from "../assets/C4.png";
 import C5 from "../assets/C5.png";
 import Footer from "./Footer";
 import CardSM from "./CardSM";
-
-import { fetchCoreMembers, fetchMembers } from "./Api";
+import Api from "./Api";
 
 function CoreMembers() {
+  const { fetchCoreMembers, fetchMembers } = Api();
   const [members, setMembers] = useState([]);
   useEffect(() => {
     const fetchMemberData = async () => {

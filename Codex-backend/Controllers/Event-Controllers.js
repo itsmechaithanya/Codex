@@ -141,7 +141,7 @@ const updateImageById = async (req, res, next) => {
     const error = new HttpError("Error occured while saving the event");
     return next(error);
   }
-  res.status(201).json({ message: "Event updated successfully" });
+  res.status(200).json({ message: "Event updated successfully" });
 };
 const deleteEvent = async (req, res, next) => {
   const id = req.params.id;

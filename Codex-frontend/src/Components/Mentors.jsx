@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Dropdown, Menu, message, Modal } from "antd";
 import { SettingOutlined } from "@ant-design/icons";
-import { deleteMentor, fetchMentors } from "./Api";
+
 import { useNavigate } from "react-router-dom";
 import AddMentor from "./AddMentor";
+import Api from "./Api";
 const { Meta } = Card;
 
 function Mentors() {
+  const { deleteMentor, fetchMentors } = Api();
   const [mentors, setMentors] = useState([]);
   const [actionToShow, setActionToShow] = useState(null); // State to store selected action
   const [selectedMentor, setSelectedMentor] = useState(null);

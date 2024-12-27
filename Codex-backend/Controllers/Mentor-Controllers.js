@@ -324,7 +324,7 @@ const updateMentorById = async (req, res, next) => {
     );
     return next(error);
   }
-  res.status(201).json({
+  res.status(200).json({
     userId: mentor.id,
     email: mentor.email,
     role: mentor.role,
@@ -351,7 +351,7 @@ const updateImageById = async (req, res, next) => {
     const error = new HttpError("Error occured while saving the mentor");
     return next(error);
   }
-  res.status(201).json({ message: "Mentor updated successfully" });
+  res.status(200).json({ message: "Mentor updated successfully" });
 };
 const deleteMentor = async (req, res, next) => {
   const id = req.params.id;

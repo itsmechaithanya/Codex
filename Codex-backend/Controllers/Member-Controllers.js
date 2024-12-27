@@ -156,7 +156,7 @@ const updateImageById = async (req, res, next) => {
     const error = new HttpError("Error occured while saving the member");
     return next(error);
   }
-  res.status(201).json({ message: "Member updated successfully" });
+  res.status(200).json({ message: "Member updated successfully" });
 };
 const deleteMember = async (req, res, next) => {
   const id = req.params.id;

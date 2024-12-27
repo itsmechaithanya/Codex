@@ -10,7 +10,7 @@ router.get("/get/upcomingevents", eventControllers.getUpcomingEvents);
 router.get("/get/event/byid/:id", eventControllers.getEventById);
 router.post(
   "/create/event",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   imageUpload.single("image"),
   [
     check("date").isLength({ min: 2, max: 255 }),
@@ -25,19 +25,19 @@ router.post(
 router.patch(
   "/update/event/byid/:id",
   imageUpload.single("image"),
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   eventControllers.updateEventById
 );
 
 router.patch(
   "/update/image/byid/:id",
-  // checkAuth("Mentor"),
+  checkAuth("Mentor"),
   imageUpload.single("image"),
   eventControllers.updateImageById
 );
 router.delete(
   "/delete/event/byid/:id",
-  // checkAuth("Member"),
+  checkAuth("Member"),
   eventControllers.deleteEvent
 );
 module.exports = router;

@@ -1,11 +1,12 @@
 import { Button, Form, Input, message, Select, Space } from "antd";
 import React, { useEffect, useState } from "react";
-import { addMentor, fetchMentorById, updateMentorById } from "./Api";
+import Api from "./Api";
 import { useNavigate, useParams } from "react-router-dom";
 
 const { Option } = Select;
 
 function AddMentor() {
+  const { addMentor, fetchMentorById, updateMentorById } = Api();
   const [image, setImage] = useState(null); // Manage image state separately
   const [mentor, setMentor] = useState(null);
   const [loading, setLoading] = useState(true); // To show loading until data is fetched
