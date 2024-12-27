@@ -6,14 +6,14 @@ export const useAuth = () => {
   const [token, setToken] = useState(false);
   const [tokenExpirationDate, setTokenExpirationDate] = useState();
   const [userId, setUserId] = useState(false);
-  const [role, setRole] = useState(null);
+  const [role, setRole] = useState("Guest");
   const [email, setEmail] = useState(false);
   const login = useCallback((userId, token, email, role) => {
     setUserId(userId);
     setToken(token);
     setEmail(email);
     setRole(role);
-    
+
     const tokenExpirationDate = new Date(new Date().getTime() + 1000 * 60 * 60);
     setTokenExpirationDate(tokenExpirationDate);
     localStorage.setItem(
@@ -32,7 +32,7 @@ export const useAuth = () => {
     setToken(null);
     setTokenExpirationDate(null);
     setUserId(null);
-    setRole(null);
+    setRole("Guest");
     setEmail(null);
     localStorage.removeItem("userData");
   }, []);

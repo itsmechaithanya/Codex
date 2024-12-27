@@ -81,7 +81,7 @@ function AddMember() {
       message.error("Failed to add member. Please try again.");
     }
   };
-  console.log(member);
+
   if (loading) {
     return <div>Loading...</div>; // Show a loading message while fetching data
   }

@@ -18,7 +18,6 @@ function Home() {
         const response = await fetchMentors();
         const data = await response.json();
         setMentors(data?.mentors);
-        console.log(data);
       } catch (err) {
         message.error("Something went wrong while fetching the data");
       }

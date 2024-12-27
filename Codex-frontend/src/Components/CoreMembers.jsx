@@ -18,7 +18,6 @@ function CoreMembers() {
         const response = await fetchCoreMembers();
         const data = await response.json();
         setMembers(data?.members);
-        console.log(data);
       } catch (err) {
         message.error("Something went wrong while fetching the data");
       }

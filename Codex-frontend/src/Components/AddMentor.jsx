@@ -81,7 +81,7 @@ function AddMentor() {
       message.error("Failed to add mentor. Please try again.");
     }
   };
-  console.log(mentor);
+
   if (loading) {
     return <div>Loading...</div>; // Show a loading message while fetching data
   }

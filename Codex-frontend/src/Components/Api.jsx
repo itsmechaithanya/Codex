@@ -40,7 +40,6 @@ export const updateMentorById = async (id, data) => {
 };
 
 export const addMentor = async (data) => {
-  console.log(data);
   const response = await fetch(`${BASE_URL}/api/codex/mentor/create/mentor`, {
     method: "POST",
 
@@ -52,7 +51,6 @@ export const addMentor = async (data) => {
   return response;
 };
 export const deleteMentor = async (id) => {
-  console.log(id);
   const response = await fetch(
     `${BASE_URL}/api/codex/mentor/delete/mentor/byid/${id}`,
     {
@@ -101,7 +99,6 @@ export const updateMemberById = async (id, data) => {
   return response;
 };
 export const addMember = async (data) => {
-  console.log(data);
   const response = await fetch(`${BASE_URL}/api/codex/member/create/member`, {
     method: "POST",
 
@@ -122,7 +119,6 @@ export const fetchMemberById = async (id) => {
   return response;
 };
 export const deleteMember = async (id) => {
-  console.log(id);
   const response = await fetch(
     `${BASE_URL}/api/codex/member/delete/member/byid/${id}`,
     {
@@ -153,7 +149,6 @@ export const updateEventById = async (id, data) => {
   return response;
 };
 export const addEvent = async (data) => {
-  console.log(data);
   const response = await fetch(`${BASE_URL}/api/codex/event/create/event`, {
     method: "POST",
 
@@ -174,7 +169,6 @@ export const fetchEventById = async (id) => {
   return response;
 };
 export const deleteEvent = async (id) => {
-  console.log(id);
   const response = await fetch(
     `${BASE_URL}/api/codex/event/delete/event/byid/${id}`,
     {

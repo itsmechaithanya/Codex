@@ -100,7 +100,7 @@ function AddEvent() {
       message.error("Failed to add event. Please try again.");
     }
   };
-  console.log(event);
+
   if (loading) {
     return <div>Loading...</div>; // Show a loading message while fetching data
   }

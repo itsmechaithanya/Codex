@@ -12,7 +12,6 @@ function ExecutiveMembers({ users = [] }) {
         const response = await fetchExecutiveMembers();
         const data = await response.json();
         setMembers(data?.members);
-        console.log(data);
       } catch (err) {
         message.error("Something went wrong while fetching the data");
       }
