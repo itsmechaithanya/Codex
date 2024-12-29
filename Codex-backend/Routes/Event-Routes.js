@@ -37,7 +37,7 @@ router.patch(
 );
 router.delete(
   "/delete/event/byid/:id",
-  checkAuth("Member"),
+  checkAuth("Mentor"),
   eventControllers.deleteEvent
 );
 module.exports = router;

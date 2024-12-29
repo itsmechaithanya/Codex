@@ -8,6 +8,7 @@ const checkAuth = require("../Middleware/check-auth");
 router.get("/get/all/members", MemberControllers.getAllMembers);
 router.get("/get/members/byrole/:role", MemberControllers.getMembersByRole);
 router.get("/get/member/byid/:id", MemberControllers.getMemberById);
+router.get("/get/subroles", MemberControllers.getSubRoles);
 router.post(
   "/create/member",
   checkAuth("Mentor"),
@@ -20,6 +21,7 @@ router.post(
     check("description").isLength({ min: 2, max: 255 }),
     check("linkedIn").isLength({ min: 2, max: 255 }),
     check("role").isLength({ min: 1, max: 255 }),
+    check("subrole").isLength({ min: 1, max: 255 }).optional(),
   ],
   MemberControllers.createMember
 );
@@ -39,7 +41,7 @@ router.patch(
 );
 router.delete(
   "/delete/member/byid/:id",
-  checkAuth("Member"),
+  checkAuth("Mentor"),
   MemberControllers.deleteMember
 );
 module.exports = router;

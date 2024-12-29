@@ -141,6 +141,13 @@ const Api = () => {
     }
     return response;
   };
+  const fetchSubRoles = async (id) => {
+    const response = await fetch(`${BASE_URL}/api/codex/member/get/subroles`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return response;
+  };
   const deleteMember = async (id) => {
     const response = await fetch(
       `${BASE_URL}/api/codex/member/delete/member/byid/${id}`,
@@ -228,6 +235,7 @@ const Api = () => {
     addEvent,
     deleteEvent,
     fetchEventById,
+    fetchSubRoles,
   };
 };
 export default Api;

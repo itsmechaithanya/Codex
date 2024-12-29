@@ -6,11 +6,14 @@ import Api from "./Api.jsx";
 const { Option } = Select;
 
 function AddMember() {
-  const { addMember, fetchMemberById, updateMemberById } = Api();
+  const { addMember, fetchMemberById, updateMemberById, fetchSubRoles } = Api();
   const [image, setImage] = useState(null); // Manage image state separately
   const [member, setMember] = useState(null);
   const [loading, setLoading] = useState(true); // To show loading until data is fetched
   const [form] = Form.useForm();
+  const [role, setRole] = useState(""); // Track selected role
+  const [subrole, setSubrole] = useState(""); // Track sub-role for Core Member
+  const [disabledSubRoles, setDisabledSubRoles] = useState([]);
   // Reset the form and the image state
   const onReset = () => {
     form.resetFields();
@@ -22,6 +25,14 @@ function AddMember() {
     const file = e.target.files[0];
     setImage(file);
     message.success("Image added successfully, please submit the form");
+  };
+  const handleRoleChange = (value) => {
+    setRole(value);
+    setSubrole(""); // Reset sub-role when changing the role
+  };
+
+  const handleSubRoleChange = (value) => {
+    setSubrole(value);
   };
 
   const prefixSelector = (
@@ -44,17 +55,31 @@ function AddMember() {
           const response = await fetchMemberById(memberId);
           const data = await response.json();
           setMember(data.member); // Set member data to pre-fill form
+          setRole(data.member?.role || "");
+          setSubrole(data.member?.subrole || "");
         } catch (error) {
           console.error("Error fetching member data:", error);
         } finally {
           setLoading(false); // Set loading to false when data is fetched
         }
       };
+
       fetchMemberData();
     } else {
       // If it's not an edit, set loading to false immediately
       setLoading(false);
     }
+    const handleSubRoles = async () => {
+      try {
+        const response = await fetchSubRoles();
+        const data = await response.json();
+        const assignedSubRoles = data.subroles || [];
+        setDisabledSubRoles(assignedSubRoles); // Set disabled sub-roles
+      } catch (err) {
+        console.error("Error fetching sub-roles:", err);
+      }
+    };
+    handleSubRoles();
   }, [memberId]);
 
   const handleSubmit = async (values) => {
@@ -82,10 +107,11 @@ function AddMember() {
       message.error("Failed to add member. Please try again.");
     }
   };
-
+  console.log("disabledSubroles", disabledSubRoles);
   if (loading) {
     return <div>Loading...</div>; // Show a loading message while fetching data
   }
+
   return (
     <div className="flex justify-center items-center min-h-screen py-32 bg-gray-100">
       <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8">
@@ -105,8 +131,8 @@ function AddMember() {
             title: member?.title || "",
             description: member?.description || "",
             email: member?.email || "",
-
             role: member?.role || "",
+            subrole: member?.subrole || "",
             linkedIn: member?.linkedIn || "",
           }}
         >
@@ -197,17 +223,62 @@ function AddMember() {
             rules={[
               !memberId.memberId && {
                 required: true,
-                message: "Please input your role!",
+                message: "Please select a role!",
               },
             ]}
           >
-            <Select placeholder="Select placeholder">
-              <Select.Option value="Core_Member">Core Member</Select.Option>
-              <Select.Option value="Executive_Member">
-                Executive Member
-              </Select.Option>
+            <Select
+              placeholder="Select role"
+              value={role}
+              onChange={handleRoleChange}
+            >
+              <Option value="Core_Member">Core Member</Option>
+              <Option value="Executive_Member">Executive Member</Option>
             </Select>
           </Form.Item>
+
+          {role === "Core_Member" && (
+            <Form.Item
+              label="Sub-Role"
+              name="subrole"
+              rules={[
+                {
+                  message: "Please select a sub-role!",
+                },
+              ]}
+            >
+              <Select
+                placeholder="Select sub-role"
+                value={subrole}
+                onChange={handleSubRoleChange}
+              >
+                <Option
+                  value="President"
+                  disabled={disabledSubRoles.includes("President")}
+                >
+                  President
+                </Option>
+                <Option
+                  value="Vice_President"
+                  disabled={disabledSubRoles.includes("Vice_President")}
+                >
+                  Vice President
+                </Option>
+                <Option
+                  value="Event_Manager_1"
+                  disabled={disabledSubRoles.includes("Event_Manager_1")}
+                >
+                  Event Manager 1
+                </Option>
+                <Option
+                  value="Event_Manager_2"
+                  disabled={disabledSubRoles.includes("Event_Manager_2")}
+                >
+                  Event Manager 2
+                </Option>
+              </Select>
+            </Form.Item>
+          )}
 
           <Form.Item
             label="Image"

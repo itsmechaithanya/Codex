@@ -10,8 +10,16 @@ const createMember = async (req, res, next) => {
       errors: errors.array(),
     });
   }
-  const { firstName, lastName, email, title, description, linkedIn, role } =
-    req.body;
+  const {
+    firstName,
+    lastName,
+    email,
+    title,
+    description,
+    linkedIn,
+    role,
+    subrole,
+  } = req.body;
   try {
     existingMember = await Member.findOne({ email: email.toLowerCase() });
   } catch (err) {
@@ -33,6 +41,7 @@ const createMember = async (req, res, next) => {
     description,
     linkedIn,
     role,
+    subrole,
     image: req.file.path,
   });
   try {
@@ -97,8 +106,16 @@ const updateMemberById = async (req, res, next) => {
     return next(error);
   }
   const id = req.params.id;
-  const { firstName, lastName, email, title, description, linkedIn, role } =
-    req.body;
+  const {
+    firstName,
+    lastName,
+    email,
+    title,
+    description,
+    linkedIn,
+    role,
+    subrole,
+  } = req.body;
   try {
     member = await Member.findOne({ _id: id });
   } catch (err) {
@@ -124,6 +141,7 @@ const updateMemberById = async (req, res, next) => {
   member.description = description ? description : member.description;
   member.linkedIn = linkedIn ? linkedIn : member.linkedIn;
   member.role = role ? role : member.role;
+  member.subrole = subrole ? subrole : member.subrole;
   try {
     await member.save();
   } catch (err) {
@@ -182,11 +200,28 @@ const deleteMember = async (req, res, next) => {
     return next(error);
   }
 };
+const getSubRoles = async (req, res, next) => {
+  let subroles;
+  try {
+    // Fetch only the 'subrole' field from the collection
+    const roles = await Member.find({}, "subrole").lean(); // .lean() for plain JavaScript objects
+    // Extract subroles from the result
+    subroles = roles.map((role) => role.subrole).filter(Boolean); // Remove undefined/null
+  } catch (err) {
+    const error = new HttpError(
+      "Something went wrong while fetching the data, please try again",
+      500
+    );
+    return next(error);
+  }
+  res.status(200).json({ subroles });
+};
 
 exports.createMember = createMember;
 exports.getAllMembers = getAllMembers;
 exports.getMembersByRole = getMembersByRole;
 exports.getMemberById = getMemberById;
+exports.getSubRoles = getSubRoles;
 exports.updateMemberById = updateMemberById;
 exports.updateImageById = updateImageById;
 exports.deleteMember = deleteMember;
