@@ -108,7 +108,7 @@ function Mentors() {
               }
             >
               <Meta
-                title="Mentors"
+                title={mentor?.firstName + " " + mentor?.lastName}
                 // description="This is the description"
               />
             </Card>

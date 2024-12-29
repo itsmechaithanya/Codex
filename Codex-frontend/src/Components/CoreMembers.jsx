@@ -32,6 +32,10 @@ function CoreMembers() {
       console.error("No LinkedIn URL provided");
     }
   };
+  // Filter members with and without subroles
+  const membersWithSubRoles = members.filter((member) => member?.subrole);
+  console.log(membersWithSubRoles);
+  const membersWithoutSubRoles = members.filter((member) => !member?.subrole);
   return (
     <div className="bg-black text-white w-full overflow-hidden h-fit">
       <div className="h-screen w-full pt-[15vh] pl-[7vw] relative">
@@ -54,8 +58,8 @@ function CoreMembers() {
         />
       </div>
       <div className=" w-screen">
-        {members &&
-          members.map((member, index) => (
+        {membersWithSubRoles &&
+          membersWithSubRoles.map((member, index) => (
             <div
               key={member.id}
               className={`flex flex-col-reverse  ${
@@ -102,7 +106,7 @@ function CoreMembers() {
           ))}
       </div>
       <div className="w-screen flex justify-between mt-[5vh] px-[7vw] flex-wrap">
-        {/* <CardSM Users={Users}/> */}
+        <CardSM Users={membersWithoutSubRoles} />
       </div>
       <Footer />
     </div>

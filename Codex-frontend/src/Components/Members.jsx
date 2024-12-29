@@ -108,7 +108,7 @@ function Members() {
               }
             >
               <Meta
-                title="Members"
+                title={member?.firstName + " " + member?.lastName}
                 // description="This is the description"
               />
             </Card>

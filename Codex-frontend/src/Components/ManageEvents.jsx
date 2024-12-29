@@ -108,7 +108,7 @@ function ManageEvents() {
               }
             >
               <Meta
-                title="Events"
+                title={event?.title}
                 // description="This is the description"
               />
             </Card>
