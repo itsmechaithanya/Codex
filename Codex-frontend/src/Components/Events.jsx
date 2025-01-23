@@ -50,6 +50,7 @@ function Events() {
           </div>
           <div>
             <h1 className='text-[1.3vh] lg:text-[1.3vw]'>On 3rd and 7th November 2024</h1>
+            
           </div>
         </div>
       </div>
