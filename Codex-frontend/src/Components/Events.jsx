@@ -2,6 +2,7 @@ import React from 'react'
 import inner from '../assets/inner1.png'
 import Footer from './Footer'
 import e1 from '../assets/e1.png'
+import e2 from '../assets/e2.png'
 
 function Events() {
   return (
@@ -39,9 +40,12 @@ function Events() {
           </div>
         </div>
       </div>
-      <div className='w-[76vw] h-[90vh] lg:mx-[12vw] bg-red-400'>
-        <div></div>
-        <div><img src="" alt="" /></div>
+      <div className='lg:w-[76vw] w-[95vw] lg:h-[90vh] lg:mx-[12vw] mx-[2.5vw] mt-[5vh] '>
+        <div className='flex flex-col items-center lg:items-start'>
+          <h1 className='text-[3vh] lg:text-[3vw] capitalize font-medium'>SIH internal Hackathon</h1>
+          <h1 className='text-[1.3vh] lg:text-[1.3vw]'>On 3rd and 7th November 2024</h1>
+        </div>
+        <div className='w-full mt-[5vh]'><img className='w-full' src={e2} alt="" /></div>
       </div>
       <Footer/>
     </div>
