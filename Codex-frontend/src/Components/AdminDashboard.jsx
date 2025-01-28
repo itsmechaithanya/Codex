@@ -15,7 +15,10 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="bg-black text-white relative">
+      <div>
+        <h1 className="bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full absolute top-[15vh] right-[5vw]">Logout</h1>
+      </div>
       <div className="w-screen h-screen flex justify-evenly items-center flex-no ">
         <Card
           style={{
