@@ -34,7 +34,7 @@ function Navbar() {
             <Link to="/CoreMembers" onClick={() => { closeMenu(); window.scrollTo(0, 0); }}><h1>Core Members</h1></Link>
             <Link to="/ExecutiveMembers" onClick={() => { closeMenu(); window.scrollTo(0, 0); }}><h1>Executive Members</h1></Link>
             <Link to="/Collaborate" onClick={() => { closeMenu(); window.scrollTo(0, 0); }}><h1>Collaborate<i className="ri-add-line"></i></h1></Link>
-            <Link to="/auth" onClick={() => { closeMenu(); window.scrollTo(0, 0); }}><h1>Log In</h1></Link>
+            <Link to="/auth" onClick={() => { closeMenu(); window.scrollTo(0, 0); }}><h1>Admin</h1></Link>
           </div>
           <div className='absolute top-[35vh] left-[4.5vh] lg:left-[2vw] d-400'>
             <h1 className='font-bold text-[1.8vh] lg:text-[1.8vw] lg:mt-[4vh]'>Get in touch !</h1>

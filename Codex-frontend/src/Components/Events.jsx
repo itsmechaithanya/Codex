@@ -28,7 +28,7 @@ function Events() {
       </div>
       <div className='h-fit lg:h-screen flex flex-col lg:flex-row-reverse justify-between items-center lg:px-[12vw]'>
         <div className='lg:h-[80vh] lg:w-[33vw] w-[90vw] overflow-hidden'>
-          <img className='w-full h-full' src={e1} alt="" />
+          <img className='w-full h-full object-cover' src={e1} alt="" />
         </div>
         <div className='lg:h-[80vh] h-[13vh] lg:w-[33vw] w-[90vw]  flex flex-col justify-between lg:py-[5vh] lg:mt-[5vh] mt-[2vh] mb-[10vh] text-center lg:text-left'>
           <div>
