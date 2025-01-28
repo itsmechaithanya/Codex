@@ -2,22 +2,45 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "./Auth-context";
 
-import { Button, Card } from "antd";
+import { Button, Card, Modal } from "antd";
 import { useNavigate } from "react-router-dom";
 const { Meta } = Card;
 
 function AdminDashboard({ users, addUserCard, deleteUserCard }) {
   const { role } = useContext(AuthContext); // Get isAdmin from AuthContext
-
+  const auth = useContext(AuthContext);
   if (role != "Mentor") {
     return <p>Access denied. Admins only.</p>; // Show this message if not admin
   }
   const navigate = useNavigate();
+  // State to control the modal visibility
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  // Function to show the modal
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  // Function to handle logout confirmation
+  const handleOk = () => {
+    auth.logout(); // Call the logout function
+    setIsModalVisible(false); // Close the modal
+  };
+
+  // Function to handle modal cancellation
+  const handleCancel = () => {
+    setIsModalVisible(false); // Close the modal without logging out
+  };
 
   return (
     <div className="bg-black text-white relative">
       <div>
-        <h1 className="bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full absolute top-[15vh] right-[5vw]">Logout</h1>
+        <h1
+          className="bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full absolute top-[15vh] right-[5vw] cursor-pointer"
+          onClick={showModal}
+        >
+          Logout
+        </h1>
       </div>
       <div className="w-screen h-screen flex justify-evenly items-center flex-no ">
         <Card
@@ -87,6 +110,16 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
           />
         </Card>
       </div>
+      <Modal
+        title="Confirm Logout"
+        visible={isModalVisible}
+        onOk={handleOk} // Logout on confirm
+        onCancel={handleCancel} // Close modal without logging out
+        okText="Yes"
+        cancelText="No"
+      >
+        <p>Are you sure you want to log out?</p>
+      </Modal>
     </div>
   );
 }
