@@ -18,7 +18,7 @@ router.post(
     check("lastName").isLength({ min: 2, max: 255 }),
     check("email").isEmail(),
     check("title").isLength({ min: 2, max: 255 }),
-    check("description").isLength({ min: 2, max: 255 }),
+    check("description").isLength({ min: 2, max:1000 }),
     check("linkedIn").isLength({ min: 2, max: 255 }),
     check("role").isLength({ min: 1, max: 255 }),
     check("subrole").isLength({ min: 1, max: 255 }).optional(),

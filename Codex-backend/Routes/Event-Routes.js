@@ -17,7 +17,7 @@ router.post(
     check("type").isLength({ min: 2, max: 255 }),
 
     check("title").isLength({ min: 2, max: 255 }),
-    check("description").isLength({ min: 2, max: 255 }),
+    check("description").isLength({ min: 2, max: 1000 }),
   ],
   eventControllers.createEvent
 );
