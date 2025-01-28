@@ -2,6 +2,7 @@ import { Button, DatePicker, Form, Input, message, Select, Space } from "antd";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Api from "./Api.jsx";
+import dayjs from "dayjs"; // Use dayjs if Ant Design is configured for it
 
 const { Option } = Select;
 
@@ -41,7 +42,7 @@ function AddEvent() {
     };
     reader.readAsDataURL(file);
   };
-
+  console.log(event);
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
       <Select
@@ -78,24 +79,28 @@ function AddEvent() {
   const handleSubmit = async (values) => {
     try {
       const formDataToSend = new FormData();
-      // Append all form values
-      for (let key in values) {
-        formDataToSend.append(key, values[key]);
-      }
-      // Append the image separately
-      if (image) {
-        formDataToSend.append("image", image);
-        formDataToSend.append("type", imageType); // Include the image type
+      const formattedValues = {
+        ...values,
+        // date: values.date ? values.date.toISOString() : null, // Send an empty string if no date is selected
+      };
+
+      for (let key in formattedValues) {
+        formDataToSend.append(key, formattedValues[key]);
       }
 
-      // Call the API
+      if (image) {
+        formDataToSend.append("image", image);
+        formDataToSend.append("type", imageType);
+      }
+
       const response = eventId.eventId
-        ? await updateEventById(eventId, formDataToSend) // Update if eventId exists
-        : await addEvent(formDataToSend); // Add if no eventId (new event)
-      message.success("event added successfully!");
+        ? await updateEventById(eventId, formDataToSend)
+        : await addEvent(formDataToSend);
+
+      message.success("Event added successfully!");
       setTimeout(() => {
         navigate("/manage/events");
-      }, [500]);
+      }, 500);
     } catch (error) {
       console.error("Error adding event:", error);
       message.error("Failed to add event. Please try again.");
@@ -105,6 +110,7 @@ function AddEvent() {
   if (loading) {
     return <div>Loading...</div>; // Show a loading message while fetching data
   }
+
   return (
     <div className="flex justify-center items-center min-h-screen py-32 bg-gray-100">
       <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8">
@@ -123,6 +129,7 @@ function AddEvent() {
             description: event?.description || "",
             email: event?.email || "",
             type: event?.type || "",
+            date: event?.date ? dayjs(event.date) : null, // Convert to dayjs or set null
           }}
         >
           <Form.Item
@@ -154,12 +161,12 @@ function AddEvent() {
           <Form.Item
             label="Date"
             name="date"
-            rules={[
-              !eventId.eventId && {
-                required: true,
-                message: "Please input date!",
-              },
-            ]}
+            // rules={[
+            //   !eventId.eventId && {
+            //     required: true,
+            //     message: "Please input date!",
+            //   },
+            // ]}
           >
             <DatePicker />
           </Form.Item>
