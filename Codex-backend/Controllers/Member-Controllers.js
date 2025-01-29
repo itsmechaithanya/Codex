@@ -10,6 +10,7 @@ const createMember = async (req, res, next) => {
       errors: errors.array(),
     });
   }
+  let existingMember
   const {
     firstName,
     lastName,
@@ -20,6 +21,7 @@ const createMember = async (req, res, next) => {
     role,
     subrole,
   } = req.body;
+  console.log(req.body)
   try {
     existingMember = await Member.findOne({ email: email.toLowerCase() });
   } catch (err) {
@@ -42,11 +44,13 @@ const createMember = async (req, res, next) => {
     linkedIn,
     role,
     subrole,
-    image: req.file.path,
+    image: req?.file?.path,
   });
+
   try {
     await createdMember.save();
   } catch (err) {
+    console.log(err)
     const error = new HttpError(
       "Something went wrong while creating the member, please try again",
       500

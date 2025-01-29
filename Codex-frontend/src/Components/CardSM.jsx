@@ -21,12 +21,12 @@ function CardSM({ Users }) {
                 src={`${
                   import.meta.env.REACT_APP_BACKEND_URL + "/" + user?.image
                 }`}
-                alt={user.name}
+                alt={user.firstName+" "+user.lastName}
               />
             </div>
             <div>
               <h1 className="text-[2vh] lg:text-[1.8vw] mt-[2vh]">
-                {user.name}
+              {user.firstName+" "+user.lastName}
               </h1>
             </div>
             <div className="text-center">

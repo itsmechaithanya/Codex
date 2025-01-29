@@ -10,7 +10,7 @@ const memberSchema = new Schema({
   linkedIn: { type: String, required: true },
   image: { type: String, required: true },
   role: { type: String, required: true },
-  subrole: { type: String, unique: true },
+  subrole: { type: String, },
 });
 memberSchema.plugin(uniqueValidator);
 module.exports = mongoose.model("Member", memberSchema);

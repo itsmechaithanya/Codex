@@ -85,28 +85,36 @@ function AddMember() {
   const handleSubmit = async (values) => {
     try {
       const formDataToSend = new FormData();
-      // Append all form values
+  
+      // Exclude subrole if it's null, undefined, or an empty string
       for (let key in values) {
+        if (key === "subrole" && (!values[key] || values[key].trim() === "")) {
+          continue;
+        }
         formDataToSend.append(key, values[key]);
       }
-      // Append the image separately
+  
+      // Append the image separately if it exists
       if (image) {
         formDataToSend.append("image", image);
       }
-
+  
       // Call the API
       const response = memberId.memberId
         ? await updateMemberById(memberId, formDataToSend) // Update if memberId exists
         : await addMember(formDataToSend); // Add if no memberId (new member)
-      message.success("member added successfully!");
+  
+      message.success("Member added successfully!");
       setTimeout(() => {
         navigate("/Members");
-      }, [500]);
+      }, 500);
     } catch (error) {
       console.error("Error adding member:", error);
       message.error("Failed to add member. Please try again.");
     }
   };
+  
+  
   console.log("disabledSubroles", disabledSubRoles);
   if (loading) {
     return <div>Loading...</div>; // Show a loading message while fetching data
