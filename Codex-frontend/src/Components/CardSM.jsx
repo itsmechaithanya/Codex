@@ -3,6 +3,13 @@ import React from "react";
 import C5 from "../assets/C5.png";
 
 function CardSM({ Users }) {
+  const linkedIn = (url) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      console.error("No LinkedIn URL provided");
+    }
+  };
   return (
     <>
       {Users.map((user, index) => (
@@ -27,11 +34,11 @@ function CardSM({ Users }) {
                 {user.description}
               </h1>
             </div>
-            <a href={user.linkedin} target="_blank" rel="noopener noreferrer">
-              <h1 className="bg-white text-black lg:px-[2vw] px-[3vh] lg:py-[1vh] py-[1vh] mr-[1vw] lg:mr-[0vw] rounded-full lg:text-[1.1vw] mt-[2vh] text-[4vw]">
+            
+              <h1  onClick={()=>linkedIn(user?.linkedIn)} className="bg-white text-black lg:px-[2vw] px-[3vh] lg:py-[1vh] py-[1vh] mr-[1vw] lg:mr-[0vw] rounded-full lg:text-[1.1vw] mt-[2vh] text-[4vw] cursor-pointer ">
                 LinkedIn
               </h1>
-            </a>
+            
           </div>
         </div>
       ))}
