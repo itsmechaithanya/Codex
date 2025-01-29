@@ -34,7 +34,7 @@ function CoreMembers() {
   };
   // Filter members with and without subroles
   const membersWithSubRoles = members.filter((member) => member?.subrole);
-  console.log(membersWithSubRoles);
+
   const membersWithoutSubRoles = members.filter((member) => !member?.subrole);
   return (
     <div className="bg-black text-white w-full overflow-hidden h-fit">
