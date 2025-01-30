@@ -52,7 +52,7 @@ function Events() {
             <div
               key={event.id}
               className={`h-fit lg:h-screen flex flex-col ${
-                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse lg:ml-[-10vw]"
               } justify-center items-center lg:px-[12vw]`}
             >
               <div className="lg:h-[80vh] lg:w-[33vw] w-[90vw] overflow-hidden">

@@ -63,7 +63,7 @@ function ExecutiveMembers({ users = [] }) {
               </div>
               <div>
                 <h1 className="text-[2vh] lg:text-[1.8vw] mt-[2vh]">
-                  {member.firstname} {member.lastName}
+                  {member.firstName} {member.lastName}
                 </h1>
               </div>
               <div className="text-center">
@@ -72,7 +72,7 @@ function ExecutiveMembers({ users = [] }) {
                 </h1>
               </div>
               <a
-                href={member.linkedin}
+                href={member.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
               >
