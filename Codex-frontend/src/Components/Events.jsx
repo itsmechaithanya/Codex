@@ -14,7 +14,8 @@ function Events() {
       try {
         const response = await fetchEvents();
         const data = await response.json();
-        setEvents(data?.events);
+        const sortedEvents = data?.events?.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setEvents(sortedEvents);
       } catch (err) {
         message.error("Something went wrong while fetching the data");
       }
@@ -83,7 +84,7 @@ function Events() {
           );
         } else if (event.type === "landscape") {
           return (
-            <div className="lg:w-[76vw] w-[95vw] lg:h-[90vh] lg:mx-[12vw] mx-[2.5vw] mt-[5vh] ">
+            <div className="lg:w-[76vw] w-[95vw] lg:h-[90vh] lg:mx-[12vw] mx-[2.5vw] mt-[5vh] lg:mb-[20vh] mb-[20vh] ">
               <div className="flex flex-col items-center lg:items-start">
                 <h1 className="text-[3vh] lg:text-[3vw] capitalize font-medium">
                   {event.title}
