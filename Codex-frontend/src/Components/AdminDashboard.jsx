@@ -33,10 +33,10 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
   };
 
   return (
-    <div className="bg-black text-white relative">
+    <div className="bg-gray-100 text-white relative">
       <div>
         <h1
-          className="bg-white text-black w-fit px-[2vw] py-[1vh] rounded-full absolute top-[15vh] right-[5vw] cursor-pointer"
+          className="bg-white border border-gray-400 text-black w-fit px-[2vw] py-[1vh] rounded-full absolute top-[15vh] right-[6vw] cursor-pointer"
           onClick={showModal}
         >
           Logout
@@ -50,7 +50,7 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
           cover={
             <img
               alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              src="https://cdn.dribbble.com/users/4100195/screenshots/18883516/media/8bf1bdc3137ceb4a57d0982e5470343d.jpg?resize=1600x1200&vertical=center"
             />
           }
           actions={[
@@ -72,7 +72,7 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
           cover={
             <img
               alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              src="https://cdn.dribbble.com/users/4100195/screenshots/18863124/media/9afc752daf47d8cf66df6b2d40f77edb.jpg?resize=1600x1200&vertical=center"
             />
           }
           actions={[
@@ -94,7 +94,7 @@ function AdminDashboard({ users, addUserCard, deleteUserCard }) {
           cover={
             <img
               alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              src="https://cdn.dribbble.com/users/4100195/screenshots/19830133/media/aca8dd00cec734f9fd6bf1a923001cef.jpg?resize=1600x1200&vertical=center"
             />
           }
           actions={[
