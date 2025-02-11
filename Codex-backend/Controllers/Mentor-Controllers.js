@@ -259,6 +259,7 @@ const updateMentorById = async (req, res, next) => {
     title,
     description,
     linkedIn,
+    email
   } = req.body;
   let mentor;
   try {
@@ -293,6 +294,7 @@ const updateMentorById = async (req, res, next) => {
   if (req.file) {
     mentor.image = req.file.path;
   }
+  (mentor.email = email ? email : mentor.email),
   (mentor.firstName = firstName ? firstName : mentor.firstName),
     (mentor.lastName = lastName ? lastName : mentor.lastName),
     (mentor.password = updatedPassword),
@@ -305,6 +307,7 @@ const updateMentorById = async (req, res, next) => {
   try {
     await mentor.save();
   } catch (err) {
+    console.log(err)
     const error = new HttpError(
       "Something went wrong while the updation of mentor, please try again",
       500
@@ -318,6 +321,7 @@ const updateMentorById = async (req, res, next) => {
       { expiresIn: "1h" }
     );
   } catch (err) {
+    
     const error = new HttpError(
       "Something went wrong while fetching the JWT token, please try again",
       500

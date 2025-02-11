@@ -142,7 +142,7 @@ function Home() {
           ))}
       </div>
       <div className=" w-full mt-[10vh] lg:mt-[15vh]">
-        <h1 className="lg:text-[4vw] text-[4vh] font-bold pt-[10vh] pl-[6vw] capitalize">
+        <h1 className="lg:text-[4vw] text-[4vh] font-bold pl-[6vw] capitalize">
           everything you need !
         </h1>
         <div className="mt-[8vh] flex flex-col justify-center items-center">
